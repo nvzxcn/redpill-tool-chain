@@ -24,7 +24,7 @@ jobs:
       matrix:
         include:
           #  两行一组，删除不需要的版本
-          - platform: ds3617xs
+          - platform: ds3615xs
             version: 7.1.0-42661
 
     steps:
@@ -79,7 +79,6 @@ jobs:
           ./redpill_tool_chain.sh add https://raw.githubusercontent.com/pocopico/rp-ext/main/bnx2/rpext-index.json
           ./redpill_tool_chain.sh add https://raw.githubusercontent.com/pocopico/rp-ext/main/bnx2x/rpext-index.json
           ./redpill_tool_chain.sh add https://raw.githubusercontent.com/pocopico/rp-ext/main/mpt2sas/rpext-index.json
-          ./redpill_tool_chain.sh add https://raw.githubusercontent.com/pocopico/rp-ext/main/mpt3sas/rpext-index.json
 
       - name: 添加扩展驱动[dva3221]
         if: matrix.platform == 'dva3221'
